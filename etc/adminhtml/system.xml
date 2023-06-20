@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_MiniCartSlider
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vectra" sortOrder="0" translate="label">
+			<label>Vectra</label>
+		</tab>
+        <section id="minicartslider" showInDefault="1" showInWebsite="1" showInStore="0" sortOrder="10" translate="label">
+            <label>Add To Cart Popup</label>
+            <tab>vectra</tab>
+            <resource>Vectra_MiniCartSlider::config_vectra_minicartslider</resource>
+            <group id="config_general" showInDefault="1" showInWebsite="1" showInStore="1" translate="label">
+                <label>General</label>
+                <field id="minicartslider_enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
+					<label>Enable Mini Cart Slider</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+            </group>
+        </section>
+    </system>
+</config>

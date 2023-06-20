@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_SocialShare
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <minicartslider>
+            <config_general>
+                <minicartslider_labeldisplay>1</minicartslider_labeldisplay>
+                <platform_labeldisplay>0</platform_labeldisplay>
+            </config_general>
+        </minicartslider>
+    </default>
+</config>
