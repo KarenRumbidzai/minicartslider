@@ -1,8 +1,8 @@
 # Vectra Add to cart popup module
 
-`vvectra/minicartslider`
+`vectra/minicartslider`
 
-- [Vectra Add to cart popup](#vectra-minicartslider)
+- [Vectra Minicart slide out](#vectra-minicartslider)
     - [Main Functionalities](#main-functionalities)
     - [Installation](#installation)
     - [Configuration](#configuration)
