@@ -1,4 +1,4 @@
-# Vectra Add to cart popup module
+# Vectra Minicart slide out module
 
 `vectra/minicartslider`
 
@@ -32,7 +32,7 @@ Add the following to your main composer.json file:
 Next, install the module via composer as follows:
 
 ```bash
-$ composer require vectra/addtocartpopup:1.0.0
+$ composer require vectra/minicartslider:1.0.0
 $ composer update -vvv
 ```
 
