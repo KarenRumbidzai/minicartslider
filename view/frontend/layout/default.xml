@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @author Vectra Team
+* @copyright Copyright © Vectra Business Technologies
+* @package Vectra_MiniCartSlider
+*/
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header-wrapper">
+            <referenceBlock name="minicart" template="Vectra_MiniCartSlider::cart/minicart.phtml" />
+            <block class="Vectra\MiniCartSlider\Block\Html\EmptyCartCMSBlock" name="minicart.cms.blocks" template="Vectra_MiniCartSlider::cart/minicart-cms.phtml" before="minicart" />
+        </referenceContainer>
+    </body>
+</page>

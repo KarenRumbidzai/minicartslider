@@ -3,3 +3,71 @@
 * @copyright Copyright © Vectra Business Technologies
 * @package Vectra_MiniCartSlider
 */
+
+& when (@media-common = true) {
+    &.vectra {
+        &-minicartSlider {
+            &.minicart-wrapper {
+                .vectra {
+                    &-minicart {
+                        &.block-minicart {
+                            position: absolute;
+                            top: 30px;
+                            border: 0;
+                            box-shadow: none;
+                            .subtitle {
+                                &.empty {
+                                    text-align: left;;
+                                }
+                            }
+                            &:before,
+                            &:after {
+                                border: 0;
+                                border-color: transparent;
+                            }
+                        }
+                    }
+
+                }
+            }
+            &.active {
+                .modal-inner-wrap {
+                    overflow: hidden;
+                }
+            }
+            .modal-slide {
+                @media screen and (min-width: @screen__l) {
+                    left: 70%;
+                }
+                .modal-header {
+                    position: absolute;
+                    z-index: 999;
+                    left: 90%;
+                }
+            }
+            #minicart-content-wrapper {
+                .block-content {
+                    .minicart-items-wrapper {
+                        height: auto !important
+                    }
+                } 
+            }
+            .emptyCartBlock {
+                .minicartCms {
+                    display: block !important;
+                }
+            }
+        }
+        &-viewEditCart {
+            position: fixed;
+            bottom: 30px;
+            text-align: center;
+            left: 40%;
+            margin: 0;
+            padding-top: 30px;
+            left: 0;
+            right: 0;
+            border-top: 1px solid @color-gray_light;
+        }
+    }
+}

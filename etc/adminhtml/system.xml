@@ -12,7 +12,7 @@
 			<label>Vectra</label>
 		</tab>
         <section id="minicartslider" showInDefault="1" showInWebsite="1" showInStore="0" sortOrder="10" translate="label">
-            <label>Add To Cart Popup</label>
+            <label>Minicart slider</label>
             <tab>vectra</tab>
             <resource>Vectra_MiniCartSlider::config_vectra_minicartslider</resource>
             <group id="config_general" showInDefault="1" showInWebsite="1" showInStore="1" translate="label">
@@ -21,6 +21,22 @@
 					<label>Enable Mini Cart Slider</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
+
+                <group id="minicart_cms" translate="label" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>minicart cms block</label>
+                    <field id="minicart_cms_enable" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                        <label>Enable block</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <tooltip>Adds the selected CMS block under the main footer section, before the copyright ribbon</tooltip>
+                    </field>
+                    <field id="minicart_cms_content" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                        <label>Block content</label>
+                        <source_model>Vectra\CustomFooter\Model\Config\Source\CmsBlock</source_model>
+                    </field>
+                    <depends>
+                        <field id="minicartslider_enable">1</field>
+                    </depends>
+                </group>
             </group>
         </section>
     </system>
