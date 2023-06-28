@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @author Vectra Team
+ * @copyright Copyright © Vectra Business Technologies
+ * @package Vectra_MiniCartSlider
+ */
+
 namespace Vectra\MiniCartSlider\Block\Cart;
 
 use \Magento\Store\Model\ScopeInterface;
