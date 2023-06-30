@@ -71,7 +71,7 @@
                         <!-- ko template: getTemplate() --><!-- /ko -->
                         <!-- ko ifnot: getCartParam('summary_count') -->
                             <div class="emptyCartBlock">
-                                <?php include ($block->getTemplateFile('Vectra_MiniCartSlider::cart/minicart-cms.phtml')) ?>
+                                <?= $this->getLayout()->createBlock("Vectra\MiniCartSlider\Block\Html\EmptyCartCMSBlock")->setTemplate("Vectra_MiniCartSlider::cart/minicart-cms.phtml")->toHtml(); ?>
                             </div>
                         <!-- /ko -->
                     </div>

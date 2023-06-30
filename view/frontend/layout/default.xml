@@ -10,7 +10,6 @@
     <body>
         <referenceContainer name="header-wrapper">
             <referenceBlock name="minicart" template="Vectra_MiniCartSlider::cart/minicart.phtml" />
-            <block class="Vectra\MiniCartSlider\Block\Html\EmptyCartCMSBlock" name="minicart.cms.blocks" template="Vectra_MiniCartSlider::cart/minicart-cms.phtml" before="minicart" />
         </referenceContainer>
     </body>
 </page>

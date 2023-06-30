@@ -8,11 +8,18 @@
  */
 
 $blockData = $this->getMiniCartBlockData();
-
 ?>
-
-<div class="minicartCms" style="display: none;">
-    <?php if($this->getModuleEnabled() && $blockData['enabled']): ?>
+<?php if($this->getModuleEnabled() && $blockData['enabled']): ?>
+    <div class="minicartCms">
         <?= $this->getCmsHtml($blockData['contentId']); ?>
-    <?php endif; ?>
-</div> 
+    </div>
+    <script>
+        require ([
+            'jquery'
+        ], function($) {
+            $('.triggerCartSlider').click(function(e) {
+                e.preventDefault()
+            })
+        });
+    </script>
+<?php endif; ?>
