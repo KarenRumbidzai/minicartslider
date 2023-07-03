@@ -1,0 +1,25 @@
+<?php
+/**
+ * @author Vectra Team
+ * @copyright Copyright © Vectra Business Technologies
+ * @package Vectra_MiniCartSlider
+ *
+ * @var block Vectra\MiniCartSlider\Block\Html\EmptyCartCMSBlock
+ */
+
+$blockData = $this->getMiniCartBlockData();
+?>
+<?php if($this->getModuleEnabled() && $blockData['enabled']): ?>
+    <div class="minicartCms">
+        <?= $this->getCmsHtml($blockData['contentId']); ?>
+    </div>
+    <script>
+        require ([
+            'jquery'
+        ], function($) {
+            $('.triggerCartSlider').click(function(e) {
+                e.preventDefault()
+            })
+        });
+    </script>
+<?php endif; ?>
