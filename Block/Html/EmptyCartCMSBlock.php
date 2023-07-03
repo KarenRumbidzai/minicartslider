@@ -13,6 +13,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\View\Element\Template\Context;
+use Vectra\MiniCartSlider\Block\Cart\MiniCartSlider;
 
 class EmptyCartCMSBlock extends Template
 {
@@ -37,10 +38,12 @@ class EmptyCartCMSBlock extends Template
         ScopeConfigInterface $_scopeConfig,
         StoreManagerInterface $_storeManager,
         Context $context,
+        MiniCartSlider $miniCartSlider,
         array $data = []
     ) {
         $this->_scopeConfig = $_scopeConfig;
         $this->_storeManager = $_storeManager;
+        $this->_miniCartSlider = $miniCartSlider;
 
         parent::__construct($context, $data);
     }
@@ -70,27 +73,13 @@ class EmptyCartCMSBlock extends Template
     }
 
     /**
-     * Gets the path for the required variable as a paramated and returns the value for that path
-     * from the db
-     *
-     * @param $path
-     * @return mixed
-    */
-    public function getScopeValue($path)
-    {
-        return $this->_scopeConfig->getValue($path, ScopeInterface::SCOPE_STORE,$this->getStoreId());
-    }
-
-    /**
      * Gets value for module enabled field from admin and converts and returns it as a boolean value
      *
      * @return bool
     */
     public function getModuleEnabled()
     {
-        $configVal = $this->getScopeValue($this->basePath . 'minicartslider_enable');
-
-        return $this->convertBoolVal($configVal);
+        return $this->_miniCartSlider->isMiniCartSliderEnabled();
     }
 
     /**
@@ -101,9 +90,9 @@ class EmptyCartCMSBlock extends Template
     public function getMiniCartBlockData()
     {
         $minicartCMSPath = $this->basePath . 'minicart_cms/minicart_cms_';
-        $isMinicartBlockEnabled = $this->getScopeValue($minicartCMSPath . 'enable');
+        $isMinicartBlockEnabled = $this->_miniCartSlider->getConfigValue($minicartCMSPath . 'enable');
         $isMinicartBlockEnabled = $this->convertBoolVal($isMinicartBlockEnabled);
-        $minicartContentId = $this->getScopeValue($minicartCMSPath . 'content');
+        $minicartContentId = $this->_miniCartSlider->getConfigValue($minicartCMSPath . 'content');
 
         return [
             'enabled' => $isMinicartBlockEnabled,
