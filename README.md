@@ -9,10 +9,10 @@
 
 ## Main Functionalities
 
-Brief description of what module does.
+Brief description of what the module does.
 
 ```bash
-A module which provides a cart slide out from the right instead of the traditional cart hover. Module has the option to display a selected CMS block when minicart is empty. Content Manager can select a dropdown list of static blocks. for empty cart CMS block.
+A module which provides a cart slide out from the right instead of the traditional cart hover. The module has the option to display a selected CMS block when minicart is empty. Content Manager can select a CMS block from a dropdown list of static blocks in backend. 
 ```
 
 ## Installation
@@ -36,7 +36,7 @@ $ composer require vectra/minicartslider:1.0.0
 $ composer update -vvv
 ```
 
-After the composer installation has finished, active the module by running the following commands from your Magento 2 root directory:
+After the composer installation has finished, activate the module by running the following commands from your Magento 2 root directory:
 
 ```bash
 $ php bin/magento module:enable Vectra_MiniCartSlider
