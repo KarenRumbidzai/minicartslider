@@ -5,84 +5,74 @@
 */
 
 & when (@media-common = true) {
-    &.vectra {
-        &-minicart {
-            &Slider {
-                &.minicart-wrapper {
-                    .vectra {
-                        &-minicart {
-                            &.block-minicart {
-                                position: absolute;
-                                top: 30px;
-                                border: 0;
-                                box-shadow: none;
-                                .subtitle {
-                                    &.empty {
-                                        text-align: left;;
-                                    }
-                                }
-                                &:before,
-                                &:after {
-                                    border: 0;
-                                    border-color: transparent;
-                                }
+    .minicartSlideOpen {
+        &.modal-slide {
+            .block-minicart {
+                margin-top: 15px;
+                @media screen and (min-width: @screen__m) {
+                    margin-top: 40px;
+                }
+                .subtitle {
+                    &.empty {
+                        text-align: left;;
+                    }
+                }
+                &:before,
+                &:after {
+                    border: 0;
+                    border-color: transparent;
+                }
+                .block-title { display: none; }
+            }
+            #btn-minicart-close, .page-main-actions {
+                display: none;
+            }
+            @media screen and (min-width: @screen__l) {
+                left: 60%;
+            }
+            .modal-header {
+                position: absolute;
+                z-index: 999;
+                left: 90%;
+            }
+            .modal-inner-wrap {
+                overflow: hidden;
+            }
+            #minicart-content-wrapper {
+                .block-content {
+                    .minicart-items-wrapper {
+                        height: auto !important;
+                        border-bottom: none;
+                        .minicart-items {
+                            position: relative;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            max-height: 60vh;
+                            height: 45vh;
+                            // chrome scroll fix
+                            &::-webkit-scrollbar {
+                                display: none;
+                                width: 0 !important
                             }
-                        }
-    
-                    }
-                }
-                &.active {
-                    .modal-inner-wrap {
-                        overflow: hidden;
-                    }
-                }
-                .modal-slide {
-                    @media screen and (min-width: @screen__l) {
-                        left: 70%;
-                    }
-                    .modal-header {
-                        position: absolute;
-                        z-index: 999;
-                        left: 90%;
-                    }
-                }
-                #minicart-content-wrapper {
-                    .block-content {
-                        .minicart-items-wrapper {
-                            height: auto !important;
-                            border-bottom: none;
-                            .minicart-items {
-                                position: relative;
-                                overflow-x: hidden;
-                                overflow-y: auto;
-                                max-height: 60vh;
-                                height: 45vh;
-                                // chrome scroll fix
-                                &::-webkit-scrollbar {
-                                    display: none;
-                                    width: 0 !important
-                                }
-                                // firefox + edge scroll fix
-                                -ms-overflow-style: none;
-                                scrollbar-width: none;
+                            // firefox + edge scroll fix
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
 
-                                .product-item {
-                                    &:last-child {
-                                        border-bottom: 1px solid @color-gray_light;
-                                    }
+                            .product-item {
+                                &:last-child {
+                                    border-bottom: 1px solid @color-gray_light;
                                 }
                             }
                         }
-                    } 
-                }
-                #btn-minicart-close { display: none; }
+                    }
+                } 
             }
             .vectra-viewEditCart {
                 @media screen and (max-width: (@screen__m - 1)) {
                     overflow: hidden;
                     position: fixed;
                     width: 90%;
-                    bottom: 0;
+                    top: 81%;
                     background: @color-white;
                     z-index: 999;
                     right: 0;

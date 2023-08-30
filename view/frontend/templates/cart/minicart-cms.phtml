@@ -9,17 +9,24 @@
 
 $blockData = $this->getMiniCartBlockData();
 ?>
-<?php if($this->getModuleEnabled() && $blockData['enabled']): ?>
+
+<?php if($this->isMiniCartSliderEnabled() && $blockData['enabled']): ?>
     <div class="minicartCms">
         <?= $this->getCmsHtml($blockData['contentId']); ?>
     </div>
-    <script>
-        require ([
+<?php endif; ?>
+
+<?php if($this->isMiniCartSliderEnabled()): ?>
+    <script type="text/javascript">
+        require([
             'jquery'
-        ], function($) {
-            $('.triggerCartSlider').click(function(e) {
-                e.preventDefault()
+        ], function ($) {
+            'use strict';
+
+            $(document).ready(function () {
+                $('.minicart-wrapper').addClass('vectra-minicartSlider');
             })
+
         });
     </script>
-<?php endif; ?>
+<?php endif; ?> 
