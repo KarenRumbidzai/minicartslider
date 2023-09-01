@@ -1,7 +1,12 @@
 var config = {
-    map: {
-        '*': {
-            'Magento_Checkout/template/minicart/content.html': 'Vectra_MiniCartSlider/template/minicart/content.html'
+    deps: [
+        "Vectra_MiniCartSlider/js/slides"
+    ],
+    config: {
+        mixins: {
+            'Magento_Checkout/js/view/minicart': {
+                'Vectra_MiniCartSlider/js/minicart-mixin': true
+            }
         }
     }
 }
