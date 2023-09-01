@@ -7,50 +7,54 @@
 & when (@media-common = true) {
 
     .minicart-wrapper {
-        @media screen and (min-width: @screen__m) {
-            &.active {
-                .block-minicart {
-                    transition: all 0.25s ease;
-                    position: fixed;
+        &.active {
+            .block-minicart {
+                @media screen and (min-width: @screen__m) {
                     width: 500px;
                     max-width: 500px;
-                    top: 0;
-                    margin-top: 0;
-                    right: 0;
                     min-width: 500px;
                     height: 100vw;
-                    z-index: 999;
-                    border: none;
                 }
+                transition: all 0.25s ease;
+                position: fixed;
+                width: 90%;                    
+                top: 0;
+                margin-top: 0;
+                right: 0;
+                height: 100%;
+                z-index: 999;
+                border: none;
             }
-            .block-minicart {
-                &:before, &after {
-                    display: none;
-                }
+        }
+        .block-minicart {
+            &:before, &after {
+                display: none;
             }
         }
 
         .minicart-items-wrapper {
             .minicart-items {
                 @media screen and (min-width: @screen__m) {
-                    position: relative;
-                    overflow: hidden;
-                    overflow-y: auto;
                     max-height: 60vh;
                     height: 60vh;
                 }
+                position: relative;
+                overflow: hidden;
+                overflow-y: auto;
+                max-height: 60%;
+                height: 60%;
             }
             ~ .actions {
                 @media screen and (max-width: (@screen__m - 1)) {
                     overflow: hidden;
                     position: fixed;
                     width: 90%;
-                    top: 81%;
+                    top: 90%;
                     background: @color-white;
                     z-index: 999;
                     right: 0;
                     padding: 20px;
-                    box-shadow: 16px 10px 3px 10px @color-gray_light;
+                    // box-shadow: 16px 10px 3px 10px @color-gray_light;
                     border-top: 1px solid @color-gray_light;
                 }
                 @media screen and (min-width: @screen__m) {
