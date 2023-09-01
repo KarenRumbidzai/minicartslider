@@ -11,7 +11,7 @@ $blockData = $this->getMiniCartBlockData();
 ?>
 
 <?php if($this->isMiniCartSliderEnabled() && $blockData['enabled']): ?>
-    <div class="minicartCms">
+    <div class="minicartCms" style="display: none;">
         <?= $this->getCmsHtml($blockData['contentId']); ?>
     </div>
 <?php endif; ?>
@@ -24,9 +24,11 @@ $blockData = $this->getMiniCartBlockData();
             'use strict';
 
             $(document).ready(function () {
-                $('.minicart-wrapper').addClass('vectra-minicartSlider');
+                $('body').addClass('vectra-minicartSlider');
             })
 
         });
     </script>
+    <div class="slider-modals-wrapper"></div>
 <?php endif; ?> 
+

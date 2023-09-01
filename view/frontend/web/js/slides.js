@@ -1,36 +1,24 @@
 require([
     'jquery',
     'Magento_Ui/js/modal/modal',
-    'mage/cookies'
 ], function ($, modal) {
-    
-    $(document).ready(function () {
-        $(".vectra-minicartSlider .showcart").click(function(event) {
-            event.preventDefault();
 
-            var options = {
-                type: 'slide',
-                responsive: true,
-                innerScroll: true,
-                modalClass: 'minicartSlideOpen',
-                responsive: true,
-                timeout: '2000',
-                closeOnMouseLeave: false,
-                closeOnEscape: true,
-                buttons: []
-            };
-
-            var modal = $('.block.block-minicart').modal(options);
-            modal.modal('openModal');
-
-            $('.action.viewcart').parent().parent().addClass('vectra-viewEditCart')
+    $(".showcart").click(function(event) {
+        
+        event.preventDefault();
+        if ($('body').hasClass('vectra-minicartSlider')) {
+            $('.slider-modals-wrapper').addClass('minicart-overlay')
 
             if ($('.subtitle.empty').length > 0) {
-                $('minicartCms').appendTo('.subtitle.empty')
+                $('.minicartCms').appendTo('.subtitle.empty')
+                $('.minicartCms').show()
             }
+        }
 
-            return false;
-        })
+    })
+
+    $(document).on("click", ".minicart-overlay", function() {
+        $('.slider-modals-wrapper').removeClass('minicart-overlay')
     });
 
 });
