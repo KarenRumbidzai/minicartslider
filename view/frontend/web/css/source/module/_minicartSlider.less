@@ -6,80 +6,80 @@
 
 & when (@media-common = true) {
 
-    .minicart-wrapper {
-        &.active {
-            .block-minicart {
-                @media screen and (min-width: @screen__m) {
-                    width: 500px;
-                    max-width: 500px;
-                    min-width: 500px;
-                    height: 100vw;
-                }
-                transition: all 0.25s ease;
-                position: fixed;
-                width: 90%;                    
-                top: 0;
-                margin-top: 0;
-                right: 0;
-                height: 100%;
-                z-index: 999;
-                border: none;
-            }
-        }
-        .block-minicart {
-            &:before, &after {
-                display: none;
-            }
-        }
-
-        .minicart-items-wrapper {
-            .minicart-items {
-                @media screen and (min-width: @screen__m) {
-                    max-height: 60vh;
-                    height: 60vh;
-                }
-                position: relative;
-                overflow: hidden;
-                overflow-y: auto;
-                max-height: 60%;
-                height: 60%;
-            }
-            ~ .actions {
-                @media screen and (max-width: (@screen__m - 1)) {
-                    overflow: hidden;
+    .vectra-minicartSlider {
+        .minicart-wrapper {
+            &.active {
+                .block-minicart {
+                    @media screen and (min-width: @screen__m) {
+                        width: 500px;
+                        max-width: 500px;
+                        min-width: 500px;
+                        height: 100vw;
+                    }
+                    transition: all 0.25s ease;
                     position: fixed;
-                    width: 90%;
-                    top: 90%;
-                    background: @color-white;
-                    z-index: 999;
+                    width: 90%;                    
+                    top: 0;
+                    margin-top: 0;
                     right: 0;
-                    padding: 20px;
-                    // box-shadow: 16px 10px 3px 10px @color-gray_light;
-                    border-top: 1px solid @color-gray_light;
-                }
-                @media screen and (min-width: @screen__m) {
-                    position: fixed;
-                    bottom: 30px;
-                    text-align: center;
-                    margin: 0;
-                    padding-top: 30px;
-                    width: 500px;
-                    right: -2px;
-                    border-top: 1px solid @color-gray_light;
+                    height: 100%;
+                    z-index: 999;
+                    border: none;
                 }
             }
-        } 
-    }
-
-    .slider-modals-wrapper {
-        &.minicart-overlay {
-            background-color: rgba(51,51,51,0.55);
-            bottom: 0;
-            left: 0;
-            position: fixed;
-            right: 500px;
-            top: 0;
-            z-index: 901;
+            .block-minicart {
+                &:before, &:after {
+                    display: none;
+                }
+            }
+    
+            .minicart-items-wrapper {
+                .minicart-items {
+                    @media screen and (min-width: @screen__m) {
+                        max-height: 60vh;
+                        height: 60vh;
+                    }
+                    position: relative;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    max-height: 60%;
+                    height: 60%;
+                }
+                ~ .actions {
+                    @media screen and (max-width: (@screen__m - 1)) {
+                        overflow: hidden;
+                        position: fixed;
+                        width: 90%;
+                        top: 90%;
+                        background: @color-white;
+                        z-index: 999;
+                        right: 0;
+                        padding: 20px;
+                        border-top: 1px solid @color-gray_light;
+                    }
+                    @media screen and (min-width: @screen__m) {
+                        position: fixed;
+                        bottom: 30px;
+                        text-align: center;
+                        margin: 0;
+                        padding-top: 30px;
+                        width: 500px;
+                        right: -2px;
+                        border-top: 1px solid @color-gray_light;
+                    }
+                }
+            } 
+        }
+        .slider-modals-wrapper {
+            &.minicart-overlay {
+                background-color: rgba(51,51,51,0.55);
+                bottom: 0;
+                left: 0;
+                position: fixed;
+                right: 500px;
+                top: 0;
+                z-index: 901;
+            }
         }
     }
 }
