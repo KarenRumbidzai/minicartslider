@@ -11,14 +11,19 @@
             &.active {
                 .block-minicart {
                     animation: fadeInRight 1s ease-in-out;
+                    height: 100vh;
+                    top: -5px;
+                    right: 0;
+                    position: fixed;
                     @media screen and (min-width: @screen__m) {
                         width: 500px;
                         max-width: 500px;
                         min-width: 500px;
-                        height: 100vw;
-                        top: -5px;
-                        right: 0;
-                        position: fixed;
+                    }
+                    @media screen and (max-width: (@screen__m - 1)) {
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
                     }
                 }
             }
