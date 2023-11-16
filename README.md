@@ -32,7 +32,7 @@ Add the following to your main composer.json file:
 Next, install the module via composer as follows:
 
 ```bash
-$ composer require vectra/minicartslider:1.0.0
+$ composer require vectra/minicartslider:master
 $ composer update -vvv
 ```
 
