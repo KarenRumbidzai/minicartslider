@@ -32,7 +32,7 @@ Add the following to your main composer.json file:
 Next, install the module via composer as follows:
 
 ```bash
-$ composer require vectra/minicartslider:master
+$ composer require vectra/minicartslider:1.0.0
 $ composer update -vvv
 ```
 
@@ -52,3 +52,5 @@ Configuration needed for module to work.
 ```bash
 Module can be enabled/disabled in admin. It display under Stores > Configuration > Vectra > Minicart slide out
 ```
+
+![Scheme](demo/600.png)
