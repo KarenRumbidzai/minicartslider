@@ -1,24 +1,24 @@
 <?xml version="1.0" ?>
 <!--
 /**
-* @author Vectra Team
-* @copyright Copyright © Vectra Business Technologies
-* @package Vectra_MiniCartSlider
+* @author Karen Rumbie
+* @copyright Copyright © Karen Rumbie Creatives
+* @package KarenRumbie_MiniCartSlider
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="vectra" sortOrder="0" translate="label">
-			<label>Vectra</label>
+        <tab id="karenrumbie" sortOrder="0" translate="label">
+			<label>KarenRumbie</label>
 		</tab>
         <section id="minicartslider" showInDefault="1" showInWebsite="1" showInStore="0" sortOrder="10" translate="label">
             <label>Minicart slide out</label>
-            <tab>vectra</tab>
-            <resource>Vectra_MiniCartSlider::config_vectra_minicartslider</resource>
+            <tab>karenrumbie</tab>
+            <resource>KarenRumbie_MiniCartSlider::config_karenrumbie_minicartslider</resource>
             <group id="config_general" showInDefault="1" showInWebsite="1" showInStore="1" translate="label">
                 <label>General</label>
                 <field id="minicartslider_enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label" type="select">
-					<label>Enable Mini Cart Slider</label>
+					<label>Enable Minicart Slider</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 				</field>
 
@@ -31,7 +31,7 @@
                     </field>
                     <field id="minicart_cms_content" translate="label" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
                         <label>CMS block content</label>
-                        <source_model>Vectra\MiniCartSlider\Model\Config\Source\CmsBlock</source_model>
+                        <source_model>KarenRumbie\MiniCartSlider\Model\Config\Source\CmsBlock</source_model>
                     </field>
                     <depends>
                         <field id="minicartslider_enable">1</field>

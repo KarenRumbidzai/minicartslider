@@ -6,7 +6,7 @@ require([
     $(".showcart").click(function(event) {
         
         event.preventDefault();
-        if ($('body').hasClass('vectra-minicartSlider')) {
+        if ($('body').hasClass('kr-minicartSlider')) {
             $('.slider-modals-wrapper').addClass('minicart-overlay')
 
             if ($('.subtitle.empty').length > 0) {

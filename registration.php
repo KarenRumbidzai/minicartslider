@@ -1,12 +1,12 @@
 <?php
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_MiniCartSlider
+ * @author Karen Rumbie
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_MiniCartSlider
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Vectra_MiniCartSlider',
+    'KarenRumbie_MiniCartSlider',
     __DIR__
 );

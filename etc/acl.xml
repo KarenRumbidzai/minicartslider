@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <!--
 /**
-* @author Vectra Team
-* @copyright Copyright © Vectra Business Technologies
-* @package Vectra_MiniCartSlider
+* @author Karen Rumbie 
+* @copyright Copyright © Karen Rumbie Creatives
+* @package KarenRumbie_MiniCartSlider
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
    <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Vectra_MiniCartSlider::config_vectra_minicartslider" title="Vectra Minicart slider" translate="title" />
+                <resource id="KarenRumbie_MiniCartSlider::config_karenrumbie_minicartslider" title="KarenRumbie Minicart slider" translate="title" />
             </resource>
         </resources>
     </acl>

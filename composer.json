@@ -1,11 +1,11 @@
 {
-    "name": "vectra/minicartslider",
-    "description": "Vectra Minicart slider",
+    "name": "karenrumbie/minicartslider",
+    "description": "KarenRumbie Minicart slider",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [
         {
-            "email": "kr@vectra.co.za",
+            "email": "karen@kashiri.org",
             "name": "Karen Rumbie"
         }
     ],
@@ -16,7 +16,7 @@
             "registration.php"
         ],
         "psr-4" : {
-            "Vectra\\MiniCartSlider\\": ""
+            "KarenRumbie\\MiniCartSlider\\": ""
         }
     }
 }

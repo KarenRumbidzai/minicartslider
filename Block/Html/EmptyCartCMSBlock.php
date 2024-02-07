@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_MiniCartSlider
+ * @author Karen Rumbie
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_MiniCartSlider
 */
 
-namespace Vectra\MiniCartSlider\Block\Html;
+namespace KarenRumbie\MiniCartSlider\Block\Html;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\App\Config\ScopeConfigInterface;

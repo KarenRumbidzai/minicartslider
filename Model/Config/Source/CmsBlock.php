@@ -1,11 +1,11 @@
 <?php
 /**
- * @author Vectra Team
- * @copyright Copyright © Vectra Business Technologies
- * @package Vectra_MiniCartSlider
+ * @author Karen Rumbie 
+ * @copyright Copyright © Karen Rumbie Creatives
+ * @package KarenRumbie_MiniCartSlider
 */
 
-namespace Vectra\MiniCartSlider\Model\Config\Source;
+namespace KarenRumbie\MiniCartSlider\Model\Config\Source;
 
 use Magento\Framework\Option\ArrayInterface;
 use Magento\Cms\Api\BlockRepositoryInterface;

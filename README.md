@@ -1,8 +1,8 @@
-# Vectra Minicart slide out module
+# Minicart slide out module
 
-`vectra/minicartslider`
+`karenrumbie/minicartslider`
 
-- [Vectra Minicart slide out](#vectra-minicartslider)
+- [KarenRumbie Minicart slide out](#karenrumbie-minicartslider)
     - [Main Functionalities](#main-functionalities)
     - [Installation](#installation)
     - [Configuration](#configuration)
@@ -24,7 +24,7 @@ Add the following to your main composer.json file:
         ...
         {
             "type": "vcs",
-            "url": "https://bitbucket.org/artcev/vectra-minicart-slider.git"
+            "url": "https://github.com/KarenRumbidzai/minicartslider.git"
         }
     ]
 ```
@@ -32,14 +32,14 @@ Add the following to your main composer.json file:
 Next, install the module via composer as follows:
 
 ```bash
-$ composer require vectra/minicartslider:1.0.0
+$ composer require karenrumbie/minicartslider:1.0.0
 $ composer update -vvv
 ```
 
 After the composer installation has finished, activate the module by running the following commands from your Magento 2 root directory:
 
 ```bash
-$ php bin/magento module:enable Vectra_MiniCartSlider
+$ php bin/magento module:enable KarenRumbie_MiniCartSlider
 
 $ php bin/magento setup:upgrade;
 $ php bin/magento di:compile;
@@ -50,7 +50,9 @@ $ php bin/magento di:compile;
 Configuration needed for module to work.
 
 ```bash
-Module can be enabled/disabled in admin. It display under Stores > Configuration > Vectra > Minicart slide out
+Module can be enabled/disabled in admin. It display under Stores > Configuration > KarenRumbie > Minicart slide out
 ```
 
-![Scheme](demo/600.png)
+![Scheme](demo/minicart-slider-be-demo.png)
+![Scheme](demo/minicart-slider-fe-demo.png)
+![Scheme](demo/minicart-slider-fe1-demo.png)
